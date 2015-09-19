@@ -12,6 +12,12 @@
 
 }
 
+.page_about .content,
+.page_contact .content {
+  display: inline-block;
+  width: 80%;
+}
+
 /*Container*/
 .container {
   min-width: 400px;
@@ -39,6 +45,8 @@
 }
 
 .vladt-header-pic {
+  -webkit-border-radius: 75px;
+  -moz-border-radius: 75px;
   border-radius: 75px;
   width: 100px;
   height: 100px;
@@ -64,6 +72,10 @@
   line-height: 24px;
 }
 
+.nav__item_active .nav__link {
+  color: #f00;
+}
+
 .nav__item:last-child {
   border-right: none;
 }
@@ -77,6 +89,11 @@
 
 .nav__link:hover {
   background: #c3c3c3;
+}
+
+.nav.nav_left .nav__item {
+  border: 0;
+  display: block;
 }
 
 /*VladT Tag*/
@@ -122,9 +139,102 @@
 
 .heading {
   font-weight: 500;
+  font-size: 24px;
+  margin: 16px 0;
+}
+
+.heading_second {
+  font-weight: 400;
+  font-size: 18px;
+  margin: 14px 0;
 }
 
 .paragraph {
   padding-left: 20px;
-  border-left: 5px solid #f00;
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: #f00;
+  margin: 16px 0;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.paragraph_smaller {
+  font-size: 13px;
+}
+
+.paragraph_green {
+  border-left-color: #0f0;
+}
+
+.button {
+  width: 80px;
+  padding: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: 0;
+  background: #f00;
+  color: #fff;
+  font-size: 14px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+
+/*Sidebar*/
+.sidebar {
+  display: inline-block;
+  width: 20%;
+  float: left;
+}
+
+/*Player*/
+.player {
+  margin-top: 10px;
+}
+
+/*Table*/
+.table th {
+  padding-right: 20px;
+}
+
+.table th {
+  border-bottom: 1px solid blue;
+}
+
+/*Social Profile*/
+.social-profile {
+  line-height: 24px;
+}
+
+.social-profile_image {
+  width: 24px;
+  height: 24px;
+  float: left;
+  margin-right: 3px;
+}
+
+/*Contact Form*/
+.contact-form {}
+.contact-form__field {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.contact-form__label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.field {
+  width: 100%;
+  height: 24px;
+}
+
+.field_textarea {
+  height: 150px;
 }
