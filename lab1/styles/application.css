@@ -238,3 +238,20 @@
 .field_textarea {
   height: 150px;
 }
+
+
+@media print {
+  .header,
+  .sidebar,
+  .player {
+    display: none;
+  }
+
+  .button {
+    border: 1px solid #000;
+    color: #000;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+}
