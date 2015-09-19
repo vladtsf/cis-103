@@ -1,0 +1,130 @@
+/*fonts*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+
+/*Page*/
+.page {
+  width: 100%;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.page_home {
+
+}
+
+/*Container*/
+.container {
+  min-width: 400px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 30px;
+  display: inline-block;
+  text-align: left;
+}
+
+/*Header*/
+.header {
+  padding: 30px 0;
+  border-bottom: 1px solid #2322AA;
+}
+
+.header__left {
+  display: inline-block;
+  width: 280px;
+}
+
+.header__right {
+  display: inline-block;
+  float: right;
+}
+
+.vladt-header-pic {
+  border-radius: 75px;
+  width: 100px;
+  height: 100px;
+}
+
+/*Navigation*/
+.nav {
+  margin-top: 30px;
+}
+
+.nav__items {
+  list-style-type: none;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  display: inline-block;
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid black;
+  line-height: 24px;
+}
+
+.nav__item:last-child {
+  border-right: none;
+}
+
+.nav__link {
+  text-transform: uppercase;
+  color: #00f;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.nav__link:hover {
+  background: #c3c3c3;
+}
+
+/*VladT Tag*/
+.vladt-tag {
+  color: #881080;
+  font-size: 13px;
+  font-family: monospace;
+  line-height: 1.2em;
+  cursor: pointer;
+}
+.vladt-tag__attribute {
+  padding-left: 16px;
+  color: #994400;
+}
+.vladt-tag__attribute-name {
+  display: inline-block;
+  float: left;
+}
+.vladt-tag__attribute-value {
+  display: inline-block;
+  float: left;
+  color: #2322AA;
+  cursor: text;
+}
+
+.vladt-tag__attribute-value:before {
+  content: '"';
+  color: #881080;
+}
+
+.vladt-tag__attribute-value:after {
+  content: '"';
+  color: #881080;
+}
+
+
+/*Helpers*/
+.clear {
+  clear: both;
+  height: 0;
+  content: " ";
+}
+
+.heading {
+  font-weight: 500;
+}
+
+.paragraph {
+  padding-left: 20px;
+  border-left: 5px solid #f00;
+}
