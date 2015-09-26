@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  position: absolute;
+  text-align: center;
+}
+
+.container {
+  width: 80%;
+  height: 90%;
+  background: #fff;
+  display: inline-block;
+  margin-top: 4%;
+  text-align: left;
+  padding: 0 5%;
+}
+
+.calculator {
+}
+
+.calculator__messages {
+  color: #f00;
+}
+.calculator_area-and-perimeter {}
+.calculator__form {
+  width: 70%;
+  display: inline-block;
+  left: 50%;
+  position: relative;
+  margin-left: -25%;
+}
+
+.field {}
+.field__label {}
+.field__label-text {
+  width: 150px;
+  display: inline-block;
+}

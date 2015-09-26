@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Area and Perimeter Calculator</title>
+  <link rel="stylesheet" href="assets/stylesheets/application.css">
+</head>
+<body>
+  <div class="page">
+    <div class="container">
+      <h1 class="page__title">Area and Perimeter Calculator</h1>
+      <p class="page__description">Enter the values below and click &quot;Calculate&quot;</p>
+      <div class="calculator calculator_area-and-perimeter" id="calculator">
+        <form action="#" class="calculator__form js-calculator__form">
+          <ul class="calculator__messages js-calculator__messages"></ul>
+          <div class="field">
+            <label for="" class="field__label">
+              <span class="field__label-text">Length</span>
+              <input type="text" class="field__input" placeholder="0" name="length"></label>
+          </div>
+          <div class="field">
+            <label for="" class="field__label">
+              <span class="field__label-text">Width</span>
+              <input type="text" class="field__input" placeholder="0" name="width"></label>
+          </div>
+          <div class="field">
+            <label for="" class="field__label">
+              <span class="field__label-text">Area</span>
+              <input type="text" class="field__input" readonly value="0" name="area"></label>
+          </div>
+          <div class="field">
+            <label for="" class="field__label">
+              <span class="field__label-text">Perimeter</span>
+              <input type="text" class="field__input" readonly value="0" name="perimeter"></label>
+          </div>
+
+          <div class="field">
+            <label for="" class="field__label">
+              <span class="field__label-text"></span>
+              <button type="submit" class="field__input">Calculate</button>
+          </div>
+
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/javascripts/area_and_perimeter.js"></script>
+  <script>
+    (function() {
+      var calc = new AreaAndPerimeterCalculator(document.getElementById("calculator"))
+      calc.init()
+    })()
+  </script>
+</body>
+</html>
