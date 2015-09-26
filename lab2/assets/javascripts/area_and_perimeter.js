@@ -26,7 +26,7 @@ window.AreaAndPerimeterCalculator = (function() {
           isValid = false;
         }
 
-        if(data.length < 0 || data.width < 0) {
+        if(data.length <= 0 || data.width <= 0) {
           messages.push("Make sure the length and width are positive");
           isValid = false;
         }
