@@ -68,24 +68,21 @@ window.AreaAndPerimeterCalculator = (function() {
       }
     };
 
-    return {
-      init: function () {
-        $elements = {
-          $form: $block.querySelector(".js-calculator__form"),
-          $length: $block.querySelector('[name=length'),
-          $width: $block.querySelector('[name=width]'),
-          $messages: $block.querySelector('.js-calculator__messages'),
-          $perimeter: $block.querySelector('[name=perimeter]'),
-          $area: $block.querySelector('[name=area]')
-        }
+    this.init = function () {
+      $elements = {
+        $form: $block.querySelector(".js-calculator__form"),
+        $length: $block.querySelector('[name=length'),
+        $width: $block.querySelector('[name=width]'),
+        $messages: $block.querySelector('.js-calculator__messages'),
+        $perimeter: $block.querySelector('[name=perimeter]'),
+        $area: $block.querySelector('[name=area]')
+      }
 
-        self.bindEvents();
-      },
+      self.bindEvents();
+    };
 
-      getPerimeter: self.getPerimeter.bind(self),
-      getArea: self.getArea.bind(self)
-
-    }
+    this.getPerimeter = self.getPerimeter.bind(self);
+    this.getArea = self.getArea.bind(self);
   };
 
 
