@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Monthly Balance Calculator</title>
+  <link rel="stylesheet" href="assets/stylesheets/application.css">
+</head>
+<body>
+  <div class="page">
+    <div class="container">
+      <h1 class="page__title">Monthly Balance Calculator</h1>
+      <div class="calculator calculator_student-scores" id="calculator">
+        <form action="#" class="js-calculator__form">
+          <div class="calculator__form js-calculator__form">
+            <div class="field">
+              <label for="" class="field__label">
+                <span class="field__label-text">Date</span>
+                <input type="text" class="field__input" name="date" placeholder="12/01/2009" value="12/01/2009">
+              </label>
+            </div>
+            <div class="field">
+              <label for="" class="field__label">
+                <span class="field__label-text">Type</span>
+                <select name="type" class="field__input">
+                  <option value="withdrawal">Withdrawal</option>
+                  <option value="deposit">Deposit</option>
+                </select>
+              </label>
+            </div>
+            <div class="field">
+              <label for="" class="field__label">
+                <span class="field__label-text">Amount</span>
+                <input type="text" class="field__input" name="amount" value="100">
+              </label>
+            </div>
+
+            <div class="field">
+              <label for="" class="field__label">
+                <span class="field__label-text"></span>
+                <button type="submit" class="field__input">Add Transaction</button>
+              </label>
+            </div>
+          </div>
+
+          <h2 class="page__title">Transactions</h2>
+          <div class="output-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>
+                    Date
+                    <br />
+                    ------------
+                  </th>
+                  <th>
+                    Amount
+                    <br />
+                    ------------
+                  </th>
+                  <th>
+                    Running Balance
+                    <br />
+                    ---------------
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody class="js-output output">
+
+              </tbody>
+            </table>
+          </div>
+
+          <h2 class="page__title">Summary</h2>
+          <div class="calculator__form calculator__form_shifted-left">
+
+            <div class="field">
+              <label for="" class="field__label">
+                <span class="field__label-text">Starting Balance</span>
+                <input type="text" class="field__input" name="starting_balance" readonly>
+              </label>
+            </div>
+
+            <div class="field">
+              <label for="" class="field__label">
+                <span class="field__label-text">Total Deposits</span>
+                <input type="text" class="field__input" name="total_deposits" readonly>
+              </label>
+            </div>
+
+            <div class="field">
+              <label for="" class="field__label">
+                <span class="field__label-text">Total Withdrawals</span>
+                <input type="text" class="field__input" name="total_withdrawals" readonly>
+              </label>
+            </div>
+
+            <div class="field">
+              <label for="" class="field__label">
+                <span class="field__label-text">Ending Balance</span>
+                <input type="text" class="field__input" name="ending_balance" readonly>
+              </label>
+            </div>
+
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="assets/javascripts/monthly_balance_calculator.js"></script>
+  <script>
+    (function() {
+      var calc = new MonthlyBalanceCalculator(document.getElementById("calculator"))
+      calc.init()
+    })()
+  </script>
+</body>
+</html>

@@ -45,6 +45,10 @@ h2.page__title {
   margin-left: -25%;
 }
 
+.calculator__form_shifted-left {
+  left: 30%;
+}
+
 .field {}
 .field__label {}
 .field__label-text {
@@ -52,7 +56,27 @@ h2.page__title {
   display: inline-block;
 }
 
+.output-container {
+  width: 500px;
+  border: 1px solid #c3c3c3;
+  min-height: 150px;
+  margin-bottom: 20px;
+}
+
 .output {
   width: 100%;
   height: 150px;
+}
+
+.table {
+  font-family: monospace;
+  width: 330px;
+}
+
+.table th {
+  font-weight: normal;
+}
+
+.transaction-value {
+  float: right;
 }
