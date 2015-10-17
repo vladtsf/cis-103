@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Die Roller</title>
+  <link rel="stylesheet" href="assets/stylesheets/application.css">
+</head>
+<body>
+  <div class="page">
+    <div class="container">
+      <h1 class="page__title">Die Roller</h1>
+      <div class="calculator calculator_die-roller" id="calculator">
+        <form action="#" class="js-calculator__form">
+          <div>
+            <span>Die 1:</span>
+            <span id="die1Value"></span>
+          </div>
+
+          <div>
+            <span>Die 2:</span>
+            <span id="die2Value"></span>
+          </div>
+
+          <div>
+            <span>Message:</span>
+            <span id="message"></span>
+          </div>
+
+          <button type="submit" class="submit">Roll the Dice</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="assets/javascripts/die_roller.js"></script>
+  <script>
+    (function() {
+      var calc = new DieRoller(document.getElementById("calculator"))
+      calc.init()
+    })()
+  </script>
+</body>
+</html>
