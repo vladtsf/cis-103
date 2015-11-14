@@ -1,0 +1,16 @@
+.app__screen {
+  min-height: 170px;
+  min-width: 570px;
+}
+
+.app__content {
+  text-align: center;
+}
+
+.balance {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.coin-controls {
+}

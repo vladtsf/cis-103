@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  position: absolute;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.app__screen {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.app__title {
+  text-align: center;
+  font-style: 37px;
+  margin: 15px 0;
+}
+
+.app__content {
+  width: 80%;
+  margin: 0 auto
+}

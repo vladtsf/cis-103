@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vending Machine</title>
+  <link rel="stylesheet" href="assets/stylesheets/main.css">
+  <link rel="stylesheet" href="assets/stylesheets/3_vending_machine.css">
+</head>
+<body>
+  <div class="app">
+    <div class="app__screen">
+      <h1 class="app__title">Vending Machine</h1>
+
+      <div class="app__content js-app-root" id="appRoot">
+
+
+
+
+        <div class="coin-controls">
+          <button class="js-coin" type="button" data-value="1">Dollar</button>
+          <button class="js-coin" type="button" data-value=".25">Quarter</button>
+          <button class="js-coin" type="button" data-value=".1">Dime</button>
+          <button class="js-coin" type="button" data-value=".05">Nickel</button>
+          <button class="js-refund">Refund</button>
+        </div>
+
+        <div class="balance-container">
+          <label class="balance">
+            <span class="balance__currency">$</span>
+            <input type="text" class="balance__amount js-balance__amount" disabled size="5" />
+          </label>
+        </div>
+
+        <div class="drinks">
+          <button class="js-drink" type="button" data-type="coke">Coke</button>
+          <button class="js-drink" type="button" data-type="diet_coke">Diet Coke</button>
+          <button class="js-drink" type="button" data-type="mtn_dew">Mountain Dew</button>
+          <button class="js-drink" type="button" data-type="dr_pepper">Dr. Pepper</button>
+          <button class="js-drink" type="button" data-type="root_beer">Root Beer</button>
+          <button class="js-drink" type="button" data-type="water">Water</button>
+
+        </div>
+
+        <p class="message js-message"></p>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="assets/javascripts/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="assets/javascripts/lib.js"></script>
+  <script type="text/javascript" src="assets/javascripts/3_vending_machine.js"></script>
+  <script>
+    window.app = new window.AppView(document.getElementById("appRoot"));
+    window.app.render();
+  </script>
+</body>
+</html>
