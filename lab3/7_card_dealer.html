@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Card Dealer</title>
+  <link rel="stylesheet" href="assets/stylesheets/main.css">
+  <link rel="stylesheet" href="assets/stylesheets/7_card_dealer.css">
+</head>
+<body>
+  <div class="app">
+    <div class="app__screen">
+      <h1 class="app__title">Card Dealer</h1>
+
+      <div class="app__content js-app-root" id="appRoot">
+
+        <div class="js-dealt-card-container dealt-card-container">
+        </div>
+
+        <div class="source">
+          <img class="card js-source-card" src="assets/images/playing-cards/cover.svg">
+        </div>
+
+        <div class="destination">
+          <div class="card card_empty card_container js-card_container"></div>
+          <div class="card card_empty card_container js-card_container"></div>
+          <div class="card card_empty card_container js-card_container"></div>
+          <div class="card card_empty card_container js-card_container"></div>
+          <div class="card card_empty card_container js-card_container"></div>
+        </div>
+
+        <div class="controls">
+          <button class="js-deal">Deal</button>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="assets/javascripts/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="assets/javascripts/lib.js"></script>
+  <script type="text/javascript" src="assets/javascripts/7_card_dealer.js"></script>
+  <script>
+    window.app = new window.AppView(document.getElementById("appRoot"));
+    window.app.render();
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+.app__content {
+  text-align: center;
+}
+
+.card {
+  width: 100px;
+  height: 146px;
+  display: inline-block;
+}
+
+.card_empty {
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.card_container {
+  margin-left: 20px;
+}
+
+.card_container:first-child,
+.card_dealt:first-child {
+  margin-left: 0;
+}
+
+.card_dealt {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: 20px;
+  -webkit-transition: all 200ms linear;
+  -ms-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.destination {
+  margin-top: 50px;
+}
+
+
+.dealt-card-container {
+}
