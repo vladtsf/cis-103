@@ -1,0 +1,27 @@
+.progress-bar {
+  width: 100%;
+  border: 2px solid black;
+  height: 20px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.progress-bar__filled {
+  display: inline-block;
+  height: 100%;
+  background: green;
+}
+
+.app__content {
+  text-align: center;
+}
+
+.progress-bar_red .progress-bar__filled {
+  background: red;
+}
+.progress-bar_yellow .progress-bar__filled {
+  background: yellow;
+}
+.progress-bar_green .progress-bar__filled {
+  background: green;
+}
