@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Team Roaster</title>
+  <link rel="stylesheet" href="assets/stylesheets/main.css">
+  <link rel="stylesheet" href="assets/stylesheets/4_team_roaster.css">
+</head>
+<body>
+  <div class="app">
+    <div class="app__screen">
+      <h1 class="app__title">Team Roaster</h1>
+
+      <div class="app__content js-app-root" id="appRoot">
+
+        <form class="fields" action="javascript:void(0);">
+          <div class="field">
+            <label>
+              <span>Team name:</span>
+              <input class="js-team-name" autofocus />
+            </label>
+            <button class="js-set-team">Set</button>
+          </div>
+
+          <div class="field">
+            <label>
+              <span>Add member:</span>
+              <input class="js-member-name" />
+            </label>
+            <select class="js-positions"></select>
+            <button class="js-add-member">Add</button>
+          </div>
+
+          <div class="field">
+            <button type="reset" class="js-reset">Reset</button>
+          </div>
+        </form>
+
+        <hr />
+
+        <div class="lineup">
+          <p class="js-team-name-label"></p>
+          <ul class="js-players"></ul>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="assets/javascripts/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="assets/javascripts/lib.js"></script>
+  <script type="text/javascript" src="assets/javascripts/4_team_roaster.js"></script>
+  <script>
+    window.app = new window.AppView(document.getElementById("appRoot"));
+    window.app.render();
+  </script>
+</body>
+</html>
