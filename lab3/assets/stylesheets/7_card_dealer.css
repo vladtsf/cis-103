@@ -8,6 +8,11 @@
   display: inline-block;
 }
 
+.source {
+  margin: 0 auto;
+  width: 640px;
+}
+
 .card_empty {
   border-radius: 5px;
   border: 1px solid black;
@@ -15,7 +20,17 @@
 
 .card_container {
   margin-left: 20px;
+  text-align: left;
 }
+
+.card_container-held {
+  border-color: red;
+}
+
+.card_container-held img {
+  opacity: .5;
+}
+
 
 .card_container:first-child,
 .card_dealt:first-child {
@@ -32,10 +47,51 @@
   transition: all 200ms linear;
 }
 
+.card__hold {
+  position: absolute;
+  margin-top: 160px;
+  width: 102px;
+}
+
 .destination {
-  margin: 50px 0;
+  margin: 50px auto;
+  width: 640px;
 }
 
 
 .dealt-card-container {
+}
+
+
+.score {
+  background: #c3c3c3;
+  width: 610px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.score__pane {
+  width: 49%;
+  text-align: left;
+  padding: 0 3px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.controls {
+  margin: 20px auto;
+}
+
+.score__pane_right {
+  text-align: right;
+  float: right;
+}
+
+.message {
+  background: red;
+  min-height: 30px;
+  width: 610px;
+  margin-top: 20px;
+  line-height: 30px;
+  margin: 20px auto;
 }

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Card Dealer</title>
+  <link rel="stylesheet" href="assets/stylesheets/main.css">
+  <link rel="stylesheet" href="assets/stylesheets/7_card_dealer.css">
+</head>
+<body>
+  <div class="app">
+    <div class="app__screen">
+      <h1 class="app__title">Video Poker</h1>
+
+      <div class="app__content js-app-root" id="appRoot">
+
+        <div class="js-dealt-card-container dealt-card-container">
+        </div>
+
+        <div class="source">
+          <img class="card js-source-card" src="assets/images/playing-cards/cover.svg">
+        </div>
+
+        <div class="destination">
+          <div class="card card_empty card_container js-card_container">
+            <button type="button" class="card__hold js-card__hold" data-idx="0">Hold</button>
+          </div>
+          <div class="card card_empty card_container js-card_container">
+            <button type="button" class="card__hold js-card__hold" data-idx="1">Hold</button>
+          </div>
+          <div class="card card_empty card_container js-card_container">
+            <button type="button" class="card__hold js-card__hold" data-idx="2">Hold</button>
+          </div>
+          <div class="card card_empty card_container js-card_container">
+            <button type="button" class="card__hold js-card__hold" data-idx="3">Hold</button>
+          </div>
+          <div class="card card_empty card_container js-card_container">
+            <button type="button" class="card__hold js-card__hold" data-idx="4">Hold</button>
+          </div>
+        </div>
+
+        <div class="score">
+          <div class="score__pane">
+            <span>Bet</span>
+            <br>
+            <span class="js-score__bet-value">0</span>
+          </div>
+          <div class="score__pane score__pane_right">
+            <span>Credits</span>
+            <br>
+            <span class="js-score__credit-value">0</span>
+          </div>
+
+        </div>
+
+        <div class="controls">
+          <button class="js-bet-one">Bet One</button>
+          <button class="js-bet-max">Bet Max</button>
+          <button class="js-deal">Deal</button>
+          <button class="js-draw">Draw</button>
+        </div>
+
+        <div class="message js-message"></div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="assets/javascripts/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="assets/javascripts/lib.js"></script>
+  <script type="text/javascript" src="assets/javascripts/8_video_poker.js"></script>
+  <script>
+    window.app = new window.AppView(document.getElementById("appRoot"));
+    window.app.render();
+  </script>
+</body>
+</html>
