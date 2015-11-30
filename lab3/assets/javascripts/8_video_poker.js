@@ -178,6 +178,14 @@
 
   var transitionend = "webkitTransitionEnd transitionend msTransitionEnd oTransitionEnd";
 
+  function transitiondelay(delay) {
+    return {
+      "-webkit-transition-delay": delay,
+      "-ms-transition-delay": delay,
+      "transition-delay": delay
+    };
+  }
+
   var VideoPokerView = function ($block) {
     this.model = new VideoPoker();
     this.init($block);
@@ -237,22 +245,51 @@
 
     this.elements.credits.text(this.model.credits);
     this.elements.bet.text(this.model.bet);
+
     this.elements.betOneButton.attr("disabled", gameOver || this.model.bet >= VideoPoker.MAX_BET);
     this.elements.betMaxButton.attr("disabled", gameOver || this.model.bet >= VideoPoker.MAX_BET);
     this.elements.dealButton.attr("disabled", gameOver);
-    $(".card", this.elements.dealtCardContainers).remove();
 
 
     (function () {
       for (var i = self.model.cards.length - 1; i >= 0; i--) {
         if(!self.model.cards[i]) {
+          $(".card", self.elements.dealtCardContainers[i]).remove();
+        }
+
+        if(!self.model.cards[i] || self.model.cards[i].rendered) {
           continue;
         }
-        var $container = $(self.elements.dealtCardContainers[i])
 
-        $(self.model.cards[i].img)
-          .appendTo($container)
-          .removeClass("card_dealt");
+        self.model.cards[i].rendered = true;
+        self.elements.dealButton.attr("disabled", true);
+
+        (function (idx, card) {
+          $(".card", self.elements.dealtCardContainers[idx]).remove();
+
+          var delay = (idx * 200) + "ms";
+
+          var $container = $(self.elements.dealtCardContainers[idx]);
+
+          $card = $(card.img)
+            .appendTo(".js-source-card")
+            .css($(".js-source-card__img").position())
+            .css(transitiondelay(delay))
+            .css({
+              "z-index": 4 - idx
+            });
+
+          setTimeout(function() {
+            $(card.img)
+              .css($container.position())
+              .on(transitionend, function() {
+                $container.append(this);
+                $(this).removeClass("card_dealt")
+                self.elements.dealButton.attr("disabled", idx < self.model.cards.length - 1);
+              });
+
+          })
+        })(i, self.model.cards[i]);
       };
     })();
 
