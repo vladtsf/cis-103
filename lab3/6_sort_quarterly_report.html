@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sort Quarterly Report</title>
+  <link rel="stylesheet" href="assets/stylesheets/main.css">
+  <link rel="stylesheet" href="assets/stylesheets/6_sort_quarterly_report.css">
+</head>
+<body>
+  <div class="app">
+    <div class="app__screen">
+      <h1 class="app__title">Sort Quarterly Report</h1>
+
+      <div class="app__content js-app-root" id="appRoot">
+
+        <table class="report">
+          <thead class="report__head">
+            <tr>
+              <th class="report__header report__item report__item_region">Region<img src="assets/images/sorting-arrows.svg" class="icon-arrows js-sort" /></th>
+              <th class="report__header report__item">Q1<img src="assets/images/sorting-arrows.svg" class="icon-arrows js-sort" /></th>
+              <th class="report__header report__item">Q2<img src="assets/images/sorting-arrows.svg" class="icon-arrows js-sort" /></th>
+              <th class="report__header report__item">Q3<img src="assets/images/sorting-arrows.svg" class="icon-arrows js-sort" /></th>
+              <th class="report__header report__item">Q4<img src="assets/images/sorting-arrows.svg" class="icon-arrows js-sort" /></th>
+            </tr>
+          </thead>
+          <tbody class="report__body js-report__body">
+            <tr class="js-report__sortable-item">
+              <td class="report__item report__item_region">East</td>
+              <td class="report__item">$1,580.00</td>
+              <td class="report__item">$2,305.00</td>
+              <td class="report__item">$2,710.00</td>
+              <td class="report__item">$1,284.00</td>
+            </tr>
+            <tr class="js-report__sortable-item">
+              <td class="report__item report__item_region">North</td>
+              <td class="report__item">$1,540.00</td>
+              <td class="report__item">$2,010.00</td>
+              <td class="report__item">$2,450.00</td>
+              <td class="report__item">$1,845.00</td>
+            </tr>
+            <tr class="js-report__sortable-item">
+              <td class="report__item report__item_region">South</td>
+              <td class="report__item">$1,130.00</td>
+              <td class="report__item">$1,168.00</td>
+              <td class="report__item">$1,847.00</td>
+              <td class="report__item">$2,710.00</td>
+            </tr>
+            <tr class="js-report__sortable-item">
+              <td class="report__item report__item_region">West</td>
+              <td class="report__item">$1,105.00</td>
+              <td class="report__item">$4,102.00</td>
+              <td class="report__item">$2,391.00</td>
+              <td class="report__item">$1,576.00</td>
+            </tr>
+          </tbody>
+          <tfoot class="report__foot">
+            <tr>
+              <td class="report__item report__item_region">Totals</td>
+              <td class="report__item">$5,355.00</td>
+              <td class="report__item">$9,585.00</td>
+              <td class="report__item">$9,398.00</td>
+              <td class="report__item">$6,196.00</td>
+            </tr>
+          </tfoot>
+        </table>
+
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="assets/javascripts/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="assets/javascripts/lib.js"></script>
+  <script type="text/javascript" src="assets/javascripts/6_sort_quarterly_report.js"></script>
+  <script>
+    window.app = new window.AppView(document.getElementById("appRoot"));
+    // window.app.render();
+  </script>
+</body>
+</html>

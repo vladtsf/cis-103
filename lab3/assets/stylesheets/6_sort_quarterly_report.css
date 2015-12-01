@@ -1,0 +1,25 @@
+.report {
+  border-collapse: collapse;
+  text-align: center;
+  width: 500px;
+  margin-top: 20px;
+}
+
+.report__head {
+  border-bottom: 2px solid black;
+}
+
+.report__item {
+  padding: 3px 0;
+}
+
+.report__item_region {
+  width: 100px;
+  text-align: left;
+}
+
+.icon-arrows {
+  width: 16px;
+  margin-left: 3px;
+  cursor: pointer;
+}
