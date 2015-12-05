@@ -1,5 +1,24 @@
 (function () {
 
+  // function padLeft(str, len) {
+  //   return [new Array(len + 1).join(" "), str].join("");
+  // }
+
+  function padRight(str, len) {
+    return [str, new Array(Math.max(len - String(str).length + 1, 0)).join(" ")].join("");
+  }
+
+  function formatRow(id, name, phone, email) {
+    var res = [];
+
+    res.push(padRight(id, 2));
+    res.push(padRight(name, 25));
+    res.push(padRight(phone, 12));
+    res.push(padRight(email, 25));
+
+    return res.join("  ");
+  }
+
   function getCookieData() {
     return document.cookie.replace(/(?:(?:^|.*;\s*)_contacts\s*\=\s*([^;]*).*$)|^.*$/, "$1");
   }
@@ -31,7 +50,7 @@
   };
 
   ContactModel.prototype.toString = function() {
-    return this.name + this.phone + this.email;
+    return formatRow(this.id + ":", this.name, this.phone, this.email);
   };
 
 
@@ -85,7 +104,13 @@
   };
 
   ContactCollection.prototype.toString = function() {
-    return this.contacts.join("\n");
+    return [
+      formatRow("#", "Name", "Phone", "Email"),
+      new Array(71).join("-"),
+      this.contacts.join("\n")
+
+
+    ].join("\n");
   };
 
   var ContactManagerView = function ($block) {
@@ -159,15 +184,29 @@
     this.save();
   };
 
+  ContactManagerView.prototype.prepopulate = function(e) {
+    this.picked = this.model.get(e.target.value);
+
+    if(this.picked) {
+      this.elements.name.val(this.picked.name);
+      this.elements.phone.val(this.picked.phone);
+      this.elements.email.val(this.picked.email);
+    }
+  };
+
+
   ContactManagerView.prototype.bindEvents = function() {
     var self = this;
 
     this.$block.on("click", ".js-add", this.add.bind(this));
     this.$block.on("click", ".js-edit", this.edit.bind(this));
     this.$block.on("click", ".js-delete", this.remove.bind(this));
+    this.$block.on("change", ".js-contact-picker", this.prepopulate.bind(this));
   };
 
   ContactManagerView.prototype.renderPicker = function() {
+    var self = this;
+
     if(this.model.contacts.length === 0) {
       this.elements.picker
         .attr("disabled", true)
@@ -178,9 +217,10 @@
         .html(
           "<option>Pick Contact</option>" +
           this.model.contacts.map(function (c) {
-            return "<option value='" + c.id + "'>" + c.name + "</option>";
+            console.log()
+            return "<option " + (self.picked && self.picked.id == c.id ? "selected " : "") + " value='" + c.id + "'>" + c.name + "</option>";
           }).join("")
-        );
+        )
     }
   };
 
