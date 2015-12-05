@@ -1,9 +1,4 @@
 (function () {
-
-  // function padLeft(str, len) {
-  //   return [new Array(len + 1).join(" "), str].join("");
-  // }
-
   function padRight(str, len) {
     return [str, new Array(Math.max(len - String(str).length + 1, 0)).join(" ")].join("");
   }
