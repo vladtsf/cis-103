@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Manager</title>
+  <link rel="stylesheet" href="assets/stylesheets/main.css">
+  <link rel="stylesheet" href="assets/stylesheets/9_contact_manager.css">
+</head>
+<body>
+  <div class="app">
+    <div class="app__screen">
+      <h1 class="app__title">Contact Manager</h1>
+
+      <div class="app__content js-app-root" id="appRoot">
+        <form class="fields" action="javascript:void(0);">
+          <div class="field">
+            <label>
+              <span>Name:</span>
+              <input class="js-name" autofocus />
+            </label>
+          </div>
+          <div class="field">
+            <label>
+              <span>Phone:</span>
+              <input class="js-phone" />
+            </label>
+          </div>
+          <div class="field">
+            <label>
+              <span>Email:</span>
+              <input class="js-email" />
+            </label>
+          </div>
+          <div class="field">
+            <button class="js-add">Add Contact</button>
+          </div>
+
+          <div class="field">
+            <select class="js-contact-picker">
+              <option>Pick Contact</option>
+            </select>
+            <button class="js-edit">Edit Contact</button>
+            <button class="js-delete">Delete Contact</button>
+          </div>
+        </form>
+
+        <textarea class="js-output output" readonly></textarea>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="assets/javascripts/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="assets/javascripts/lib.js"></script>
+  <script type="text/javascript" src="assets/javascripts/9_contact_manager.js"></script>
+  <script>
+    window.app = new window.AppView(document.getElementById("appRoot"));
+    window.app.render();
+  </script>
+</body>
+</html>
